@@ -1,7 +1,7 @@
 from django.contrib import admin
 from store.models import (
     Cart, Product, Category, Gallery, Specification, Size, Color, 
-    CartOrder, CartOrderItem, Wishlist, Review, ProductFaq, Coupon, Notification
+    CartOrder, CartOrderItem, Wishlist, Review, ProductFaq, Coupon, Notification,Tax
 )
 from shortuuid.django_fields import ShortUUIDField
 
@@ -102,3 +102,5 @@ admin.site.register(Review, ReviewAdmin)  # Register Review with ReviewAdmin cus
 admin.site.register(ProductFaq, ProductFaqAdmin)  # Register ProductFaq with ProductFaqAdmin customization
 admin.site.register(Coupon, CouponAdmin)  # Register Coupon with CouponAdmin customization
 admin.site.register(Notification, NotificationAdmin)  # Register Notification with NotificationAdmin customization
+admin.site.register(Tax)
+

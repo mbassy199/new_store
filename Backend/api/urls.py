@@ -13,9 +13,9 @@ urlpatterns = [
     path('user/password-reset/<email>/', userauths_views.PasswordEmailVerify.as_view(), name='password_reset'),
     path('user/password-change/', userauths_views.PasswordChangeView.as_view(), name='password_change'),
 
-
-
-    #store Endpoints
+    # Store Endpoints
     path('category/', store_views.CategoryListView.as_view(), name='category'),
     path('products/', store_views.ProductListView.as_view(), name='products'),
+    path('products/<slug:slug>/', store_views.ProductDetailView.as_view(), name='brand'),
+    path('cart-view/', store_views.CartAPI.as_view(), name='cart-view'),
 ]

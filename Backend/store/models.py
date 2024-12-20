@@ -388,3 +388,24 @@ class Coupon(models.Model):
     
     def size(self):
         return Size.objects.filter(product=self)
+
+
+
+
+class Tax(models.Model):
+    country = models.CharField(max_length=100)
+    rate = models.FloatField(default=5.0, help_text="Numbers added here are in percentage.")
+    active = models.BooleanField(default=True)
+    date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.country
+    
+    class Meta:
+        verbose_name_plural = 'taxes'
+    
+
+    
+
+
+
